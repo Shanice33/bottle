@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>login</title>
+    <title>upload</title>
 </head>
 <body>
-<form
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    Category:<input type="text" name="category">
+    Select a file:<input type="file" name="upload">
+    <input type="submit" value="Start upload">
+</form>
 </body>
 </html>

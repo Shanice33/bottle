@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<div class="header">
+    %if username:
+    <h1>welcome,{{username}}!</h1>
+    %else:
+    <h1>{{"请先登陆!"}}</h1>
+    %end
+</div>
+<div class="nav">
+    <ul>
+        %for nav in nav_list:
+        <li><a href="{{nav}}">{{nav}}</a> </li>
+        %end
+    </ul>
+</div>
+<div class="container">
+    <div class="item">
+        <h1>{{blog['title']}}</h1>
+        <div class="content">
+            <img src="{{img}}" alt="cat">
+            <p>{{blog['content']}}</p>
+            <img src="./33.jpg" alt="cat">
+        </div>
+    </div>
+</div>
+</body>
+</html>

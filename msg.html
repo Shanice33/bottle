@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+</head>
+<body>
+<h1>留言</h1>
+<form action="/message" method="get">
+    这是一个发送get请求的表单
+    <br>
+    <textarea name="name" placeholder="输入你的名字"></textarea>
+    <textarea name="content" placeholder="说出你的心里话"></textarea>
+    <br>
+    <button type="submit">用get提交表单</button>
+</form>
+
+%for m in msgs:
+<h1>{{m['name']}}   {{m['content']}}</h1>
+%end
+
+<form action="/message" method="post">
+    这是一个post提交的表单
+    <br>
+    <textarea name="name" placeholder="输入你的名字"></textarea>
+    <textarea name="content" placeholder="说出你的心里话"></textarea>
+    <br>
+    <button type="submit">用post提交表单</button>
+</form>
+
+</body>
+</html>

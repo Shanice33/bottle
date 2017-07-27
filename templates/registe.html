@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registe</title>
+</head>
+<body>
+<div class="flash">
+   {%for massage in get_flashed_messages()%}
+    <div>{{massage}}</div>
+    {%endfor%}
+</div>
+<form action="" method="post">
+    <h1>用户名：</h1>
+    <p><input type="text" name="username" ></p><br>
+    <h1>密码：</h1>
+    <p><input type="password" name="password" ></p><br>
+    <input type="submit" value="registe">
+</form>
+</body>
+</html>

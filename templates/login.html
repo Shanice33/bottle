@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login In</title>
+</head>
+<body>
+<div class="container">
+    {%for massage in get_flashed_messages()%}
+    <div>{{massage}}</div>
+    {%endfor%}
+</div>
+<div class="form">
+<form action="/login" method="post">
+    <input type="text" name="username" placeholder="input your name"><br>
+    <input type="password" name="password" placeholder="input your password"><br>
+    <input type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>

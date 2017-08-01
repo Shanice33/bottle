@@ -9,22 +9,16 @@
     <h1>{%if username:%}{{username}}{%endif%} 你好</h1>
 </div>
 <div class="content">
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
     <h3>请写下你的留言：</h3><br>
     <h2>姓名：</h2>
     <input type="text" name="name"><br>
     <h2>内容：</h2>
     <textarea name="content"></textarea><br>
     <h2>上传文件：</h2>
-    <input type="file" name="file">
+    <input type="file" name="file"><br>
+        <input type="submit" value="submit">
     </form>
-</div>
-<div content="show">
-<h2>留言信息评论:</h2><br>
-    <h3>{{name}}留言：</h3><br>
-    {{content}}
-    <br>
-    <img src="{{img}}">
 </div>
 </body>
 </html>

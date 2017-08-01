@@ -6,8 +6,15 @@
 </head>
 <body>
 <div class="text" style="text-align: center">
-    <h1>welcome {%if name%}{{name}}{%endif%}，this is my first work！</h1>
+    {%if not name:%}
+    <h1>welcome，this is my first work！</h1>
+    {%else:%}
+    {%for massage in get_flashed_messages()%}
+    <h1>{{massage}}</h1>
+    {%endfor%}
+    {%endif%}
 </div>
+
 <div class="picture">
     <img src="{{img}}" alt=cat"/>
 </div>
